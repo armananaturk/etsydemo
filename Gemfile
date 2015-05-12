@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
+gem "devise"
 
 gem 'byebug'
   gem 'web-console', '~> 2.0'

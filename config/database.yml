@@ -7,11 +7,14 @@
 default: &default
   adapter: sqlite3
   pool: 5
-  timeout: 5000
+  timeout: 10000
 
 development:
   <<: *default
   database: db/development.sqlite3
+
+     // set SQLite to wait and retry for up to 100ms if database locked
+    sqlite3_busy_timeout( db, 100 )
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
